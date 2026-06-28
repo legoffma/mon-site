@@ -313,8 +313,11 @@ h3 { font-size: 1.25rem; }
 .field input.invalid, .field textarea.invalid { border-color: #ff6b6b; }
 .error { color: #ff8585; font-size: 0.8rem; display: block; margin-top: 0.3rem; min-height: 1em; }
 
+.hidden { position: absolute; left: -9999px; opacity: 0; }
+
 .form-feedback { margin-top: 1rem; font-weight: 600; }
 .form-feedback.success { color: #4ade80; }
+.form-feedback.error { color: #ff8585; }
 
 .contact-info h3 { margin-bottom: 1rem; }
 .contact-info p { color: var(--muted); margin-bottom: 1.2rem; }

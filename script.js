@@ -91,10 +91,12 @@
       });
     });
 
+    var submitBtn = form.querySelector('button[type="submit"]');
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       feedback.textContent = "";
-      feedback.classList.remove("success");
+      feedback.classList.remove("success", "error");
 
       var valid = true;
       var name = form.elements.name.value.trim();
@@ -116,11 +118,38 @@
 
       if (!valid) return;
 
-      // Pas de backend : on simule l'envoi côté client
-      feedback.classList.add("success");
-      feedback.textContent =
-        "Merci " + name + " ! Votre message a bien été enregistré. Nous vous répondrons rapidement.";
-      form.reset();
+      // Envoi réel via Web3Forms (compatible GitHub Pages, sans backend)
+      var btnLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Envoi en cours…";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          if (data.success) {
+            feedback.classList.add("success");
+            feedback.textContent =
+              "Merci " + name + " ! Votre message a bien été envoyé. Nous vous répondrons rapidement.";
+            form.reset();
+          } else {
+            throw new Error(data.message || "Erreur d'envoi");
+          }
+        })
+        .catch(function () {
+          feedback.classList.add("error");
+          feedback.textContent =
+            "Une erreur est survenue. Merci de réessayer ou de nous écrire directement par email.";
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = btnLabel;
+        });
     });
   }
 })();
