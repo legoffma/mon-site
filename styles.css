@@ -1,17 +1,17 @@
 /* =========================================================
-   Nova Studio — Feuille de styles
+   Lorem Ipsum — Feuille de styles
    ========================================================= */
 
 /* ----- Variables & reset ----- */
 :root {
-  --bg: #0e1020;
-  --bg-alt: #14172b;
-  --surface: #1b1f38;
-  --text: #eef0f7;
-  --muted: #a4abc9;
-  --primary: #6c5ce7;
-  --primary-2: #00d2ff;
-  --accent: #ff7eb6;
+  --bg: #0a140e;
+  --bg-alt: #0f1c14;
+  --surface: #142519;
+  --text: #eef7f0;
+  --muted: #9fc2ac;
+  --primary: #16a34a;
+  --primary-2: #34d399;
+  --accent: #a3e635;
   --border: rgba(255, 255, 255, 0.08);
   --radius: 16px;
   --shadow: 0 20px 45px -20px rgba(0, 0, 0, 0.6);
@@ -95,7 +95,7 @@ h3 { font-size: 1.25rem; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(14, 16, 32, 0.7);
+  background: rgba(10, 20, 14, 0.7);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
@@ -161,8 +161,8 @@ h3 { font-size: 1.25rem; }
   position: relative;
   padding: clamp(3rem, 8vw, 6rem) 0;
   background:
-    radial-gradient(60% 60% at 80% 0%, rgba(108, 92, 231, 0.25), transparent 70%),
-    radial-gradient(50% 50% at 0% 30%, rgba(0, 210, 255, 0.18), transparent 70%);
+    radial-gradient(60% 60% at 80% 0%, rgba(22, 163, 74, 0.25), transparent 70%),
+    radial-gradient(50% 50% at 0% 30%, rgba(52, 211, 153, 0.18), transparent 70%);
 }
 .hero-inner {
   display: grid;
@@ -239,13 +239,13 @@ h3 { font-size: 1.25rem; }
 /* ----- Services ----- */
 .services-grid { grid-template-columns: repeat(4, 1fr); }
 .service-card { transition: transform 0.25s ease, border-color 0.25s ease; }
-.service-card:hover { transform: translateY(-6px); border-color: rgba(108, 92, 231, 0.5); }
+.service-card:hover { transform: translateY(-6px); border-color: rgba(22, 163, 74, 0.5); }
 .service-icon {
   font-size: 2rem;
   width: 56px; height: 56px;
   display: grid; place-items: center;
   border-radius: 14px;
-  background: rgba(108, 92, 231, 0.15);
+  background: rgba(22, 163, 74, 0.15);
   margin-bottom: 1rem;
 }
 .service-card h3 { margin-bottom: 0.5rem; }
@@ -307,7 +307,7 @@ h3 { font-size: 1.25rem; }
 .field input:focus, .field textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.25);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
 }
 .field textarea { resize: vertical; }
 .field input.invalid, .field textarea.invalid { border-color: #ff6b6b; }

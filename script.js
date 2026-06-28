@@ -1,5 +1,5 @@
 /* =========================================================
-   Nova Studio — Interactions
+   Lorem Ipsum — Interactions
    ========================================================= */
 (function () {
   "use strict";
