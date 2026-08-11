@@ -390,3 +390,97 @@ h3 { font-size: 1.25rem; }
   * { animation: none !important; scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* =========================================================
+   Ajouts multi-pages
+   ========================================================= */
+
+/* ----- Lien de navigation actif ----- */
+.nav-menu a.active { color: var(--text); position: relative; }
+.nav-menu a.active::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -6px;
+  height: 2px; border-radius: 2px;
+  background: var(--gradient);
+}
+
+/* ----- Hero des sous-pages ----- */
+.page-hero {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  background:
+    radial-gradient(60% 60% at 80% 0%, rgba(22, 163, 74, 0.2), transparent 70%),
+    radial-gradient(50% 50% at 0% 30%, rgba(52, 211, 153, 0.14), transparent 70%);
+}
+.page-hero .container { max-width: 780px; }
+.page-hero h1 { margin-bottom: 1rem; }
+.page-hero .lead { margin: 0 auto; }
+
+/* ----- Fil d'Ariane ----- */
+.breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+.breadcrumb a:hover { color: var(--primary-2); }
+
+/* ----- Contenu rédactionnel ----- */
+.prose { max-width: 780px; margin: 0 auto; }
+.prose p { color: var(--muted); margin-bottom: 1.2rem; }
+.prose h3 { margin: 2.2rem 0 0.8rem; color: var(--text); }
+.prose ul { margin: 0 0 1.2rem 1.2rem; color: var(--muted); }
+.prose li { margin-bottom: 0.5rem; }
+
+/* ----- Grilles génériques ----- */
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* ----- Cartes "Pour qui" / Techniques ----- */
+.info-card { transition: transform 0.25s ease, border-color 0.25s ease; }
+.info-card:hover { transform: translateY(-6px); border-color: rgba(22, 163, 74, 0.5); }
+.info-card h3 { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+.info-card p { color: var(--muted); font-size: 0.95rem; }
+.info-icon { font-size: 1.5rem; }
+
+/* ----- Étapes numérotées ----- */
+.steps { counter-reset: step; display: grid; gap: 1.5rem; }
+.step { position: relative; padding-left: 3.4rem; }
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute; left: 0; top: 0;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #fff; font-weight: 700;
+  display: grid; place-items: center;
+}
+.step h3 { margin-bottom: 0.4rem; }
+.step p { color: var(--muted); }
+
+/* ----- Témoignages ----- */
+.quote-card { display: flex; flex-direction: column; gap: 1.2rem; }
+.quote-card blockquote { color: var(--text); font-style: italic; font-size: 1.02rem; }
+.quote-author { display: flex; align-items: center; gap: 0.8rem; }
+.avatar {
+  width: 46px; height: 46px; flex: none;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #fff; font-weight: 700;
+  display: grid; place-items: center;
+}
+.quote-author strong { display: block; }
+.quote-author span { color: var(--muted); font-size: 0.85rem; }
+
+/* ----- Bandeau d'appel à l'action ----- */
+.cta-band .card { text-align: center; padding: clamp(2rem, 5vw, 3.5rem); }
+.cta-band h2 { margin-bottom: 0.8rem; }
+.cta-band p { color: var(--muted); max-width: 560px; margin: 0 auto 1.8rem; }
+
+/* ----- Liens de pied de page ----- */
+.footer-links { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); font-size: 0.9rem; }
+.footer-links a:hover { color: var(--primary-2); }
+
+@media (max-width: 960px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
