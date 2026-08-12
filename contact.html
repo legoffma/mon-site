@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contacter votre préparateur mental à Grenoble : premier échange gratuit, séances au cabinet ou en visio." />
-  <title>Contact — Élan Mental Grenoble</title>
+  <meta name="description" content="Contacter votre préparatrice mentale à Grenoble : séances en présentiel, en visio ou sur le terrain. Premier échange sans engagement." />
+  <title>Lieux &amp; contact — Préparation mentale à Grenoble</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="nav container">
-      <a href="index.html" class="brand"><span class="brand-mark">◆</span> Élan<span>Mental</span></a>
+      <a href="index.html" class="brand"><span class="brand-mark">◆</span> <span class="brand-text"><b>Préparation mentale</b><small>à Grenoble et alentours</small></span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="preparation-mentale.html">Préparation mentale</a></li>
-        <li><a href="pour-qui.html">Pour qui&nbsp;?</a></li>
-        <li><a href="techniques.html">Techniques</a></li>
-        <li><a href="coach.html">Le coach</a></li>
-        <li><a href="temoignages.html">Témoignages</a></li>
-        <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+        <li><a href="index.html">À propos</a></li>
+        <li><a href="accompagnements.html">Accompagnements</a></li>
+        <li><a href="escalade.html">Escalade</a></li>
+        <li><a href="contact.html" class="nav-cta active">Lieux &amp; contact</a></li>
       </ul>
     </nav>
   </header>
@@ -29,9 +29,9 @@
   <main>
     <section class="page-hero">
       <div class="container reveal">
-        <p class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Contact</p>
-        <p class="eyebrow">Premier échange gratuit</p>
-        <h1>Contact</h1>
+        <p class="breadcrumb"><a href="index.html">Accueil</a> &rsaquo; Lieux &amp; contact</p>
+        <p class="eyebrow">Sans engagement</p>
+        <h1>Lieux &amp; contact</h1>
         <p class="lead">
           Une question, une envie d'en savoir plus&nbsp;? Écrivez-moi&nbsp;: je vous réponds
           rapidement pour convenir d'un premier échange, sans engagement.
@@ -39,12 +39,40 @@
       </div>
     </section>
 
+    <!-- ===== Lieux ===== -->
     <section class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Où l'on se rencontre</p>
+          <h2>Trois façons de travailler ensemble</h2>
+        </header>
+        <div class="grid grid-3">
+          <article class="card info-card reveal">
+            <div class="service-icon">🏡</div>
+            <h3>À Grenoble, St Jean en Royans ou à votre domicile</h3>
+            <p>Dans des espaces de travail calmes et confidentiels pour nos séances.</p>
+          </article>
+          <article class="card info-card reveal">
+            <div class="service-icon">💻</div>
+            <h3>En visio</h3>
+            <p>Où que vous soyez, l'accompagnement peut se dérouler en visioconférence.</p>
+          </article>
+          <article class="card info-card reveal">
+            <div class="service-icon">🧗</div>
+            <h3>Sur le terrain</h3>
+            <p>Suivant les besoins de l'accompagnement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Formulaire + coordonnées ===== -->
+    <section class="section section-alt">
       <div class="container">
         <div class="contact-inner">
           <form class="contact-form card reveal" id="contactForm" novalidate>
             <!-- Web3Forms : remplacez la valeur par votre clé (https://web3forms.com) -->
-            <input type="hidden" name="access_key" value="VOTRE_CLE_ACCESS_KEY" />
+            <input type="hidden" name="access_key" value="4afd53aa-be49-471e-a380-7e0ea51ec09f" />
             <input type="hidden" name="subject" value="Nouveau message depuis preparation-mentale-grenoble.com" />
             <!-- Champ anti-spam (honeypot) : doit rester vide -->
             <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -69,10 +97,9 @@
 
           <aside class="contact-info reveal">
             <h3>Coordonnées</h3>
-            <!-- Remplacez par vos véritables coordonnées -->
             <p><strong>Email</strong><br /><a href="mailto:contact@preparation-mentale-grenoble.com">contact@preparation-mentale-grenoble.com</a></p>
-            <p><strong>Téléphone</strong><br /><a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
-            <p><strong>Cabinet</strong><br />Grenoble (38)<br />Séances au cabinet ou en visioconférence</p>
+            <!--<p><strong>Téléphone</strong><br /><a href="tel:+33000000000">[Votre numéro]</a></p>-->
+            <p><strong>Zone</strong><br />Grenoble, St Jean en Royans et alentours (26, 38)<br />Séances en présentiel, en visio ou sur le terrain</p>
           </aside>
         </div>
       </div>
@@ -81,15 +108,14 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a href="index.html" class="brand"><span class="brand-mark">◆</span> Élan<span>Mental</span></a>
+      <a href="index.html" class="brand"><span class="brand-mark">◆</span> <span class="brand-text"><b>Préparation mentale</b><small>à Grenoble et alentours</small></span></a>
       <ul class="footer-links">
-        <li><a href="preparation-mentale.html">Préparation mentale</a></li>
-        <li><a href="pour-qui.html">Pour qui&nbsp;?</a></li>
-        <li><a href="techniques.html">Techniques</a></li>
-        <li><a href="coach.html">Le coach</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">À propos</a></li>
+        <li><a href="accompagnements.html">Accompagnements</a></li>
+        <li><a href="escalade.html">Escalade</a></li>
+        <li><a href="contact.html">Lieux &amp; contact</a></li>
       </ul>
-      <p>&copy; <span id="year"></span> Élan Mental &middot; Grenoble</p>
+      <p>&copy; <span id="year"></span> Préparation mentale à Grenoble et alentours</p>
       <button class="back-to-top" id="backToTop" aria-label="Revenir en haut">↑</button>
     </div>
   </footer>

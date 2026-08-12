@@ -1,0 +1,11 @@
+# Fichiers privés / à ne pas publier
+Gandi/
+.claude/
+*.tmp
+*.pdf
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
+Thumbs.db
