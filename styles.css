@@ -715,3 +715,47 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   * { animation: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ----- FAQ (accordéon) ----- */
+.faq-list { max-width: 780px; margin: 0 auto; display: grid; gap: 1rem; }
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.15rem 1.4rem;
+  font-family: var(--font-title);
+  font-size: 1.08rem;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--primary-dark);
+  transition: transform 0.25s ease;
+  line-height: 1;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item .faq-answer { padding: 0 1.4rem 1.35rem; color: var(--muted); }
+.faq-item .faq-answer p { margin: 0; }
+
+/* ----- Photo large (paysage, pleine largeur) ----- */
+.wide-photo { margin: 2.5rem auto 0; max-width: 960px; }
+.wide-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: block;
+}
