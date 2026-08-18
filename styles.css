@@ -759,3 +759,15 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   box-shadow: var(--shadow);
   display: block;
 }
+
+/* ----- Photos empilées dans la colonne visuel ----- */
+.about-visual .photo-figure + .photo-figure { margin-top: 1.6rem; }
+
+/* ----- Photo portrait rectangulaire (grand format) ----- */
+.rect-photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
