@@ -185,11 +185,6 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 /* empeche la coupure d'un groupe de mots, sauf sur petit ecran */
 @media (min-width: 641px) { .nowrap-lg { white-space: nowrap; } }
 
-.brand-mark {
-  color: var(--accent);
-  font-size: 1.15em;
-}
-
 .nav-menu {
   list-style: none;
   display: flex;
