@@ -217,6 +217,24 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 
+/* ----- Tarif ----- */
+.tarif {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+  margin: 0;
+}
+.tarif-label { color: var(--muted); font-size: 1.05rem; }
+.tarif-prix {
+  font-family: var(--font-title);
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--accent-dark);
+}
+
 /* ----- Cartes ----- */
 .card {
   background: var(--surface);
